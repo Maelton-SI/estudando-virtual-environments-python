@@ -75,3 +75,19 @@ Agora se outro desenvolvedor for rodar o projeto, ele pode utilizar o comando:
 Que o gerenciador de pacotes cuidará de baixar e instalar as versões corretas de todos os pacotes que foram utilizados no sistema.
 
 ##
+
+## Pesquisas realizadas:
+
+<br/>
+
+Por padrão, o virtualenv não suporta a renomeação de ambientes. É mais seguro apenas excluir o diretório virtualenv e criar um novo com o nome correto. Você pode fazer isso:
+
+Ative seu virtualenv: source vnev/bin/activate
+Crie um arquivo requirements.txt dos pacotes atualmente instalados: pip freeze > requirements.txt
+Exclua o virtualenv com erro ortográfico: rm -r vnev/
+Crie um novo virtualenv com o nome correto: virtualenv venv
+Ative o novo virtualenv: source venv/bin/activate
+Instale os pacotes de requirements.txt: pip install -r requirements.txt
+Se a recriação não for uma opção, existem ferramentas de terceiros, como virtualenv-mv, que podem ser úteis.
+
+Fonte: https://pt.answacode.com/stackoverflow/43256369/como-renomear-um-virtualenv-em-python
