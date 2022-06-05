@@ -80,7 +80,7 @@ Que o gerenciador de pacotes cuidará de baixar e instalar as versões corretas 
 
 <br/>
 
-Por padrão, o virtualenv não suporta a renomeação de ambientes. É mais seguro apenas excluir o diretório virtualenv e criar um novo com o nome correto. Você pode fazer isso:
+**Por padrão, o virtualenv não suporta a renomeação de ambientes. É mais seguro apenas excluir o diretório virtualenv e criar um novo com o nome correto. Você pode fazer isso:**
 
 Ative seu virtualenv: source vnev/bin/activate
 Crie um arquivo requirements.txt dos pacotes atualmente instalados: pip freeze > requirements.txt
@@ -91,3 +91,15 @@ Instale os pacotes de requirements.txt: pip install -r requirements.txt
 Se a recriação não for uma opção, existem ferramentas de terceiros, como virtualenv-mv, que podem ser úteis.
 
 Fonte: https://pt.answacode.com/stackoverflow/43256369/como-renomear-um-virtualenv-em-python
+
+##
+
+**Não recomendo que você envie seu ambiente virtual para seu repositório Git.**
+
+Ao invés disso, use o comando pip freeze para obter uma lista de todos pacotes utilizados no seu ambiente virtual e salve a saída no arquivo requirements.txt. Este arquivo sim, deve ser enviado para seu repositório. Usando pip install -r requirements.txt em um ambiente virtual novo, você conseguirá reinstalar todos pacotes necessários ao seu projeto (nas versões corretas inclusive).
+
+O ideal seria configurar um arquivo .gitignore na pasta raiz do seu projeto para ignorar os arquivos do ambiente virtual. Se seu ambiente virtual está dentro da pasta venv por exemplo, adicione venv/ no .gitignore e salve.
+
+**Em geral, não suba conteúdos de dependência que podem ser facilmente obtidos. Procure escrever um README.md esclarecedor, descrevendo os procedimentos de obtenção dos módulos dos quais o programa depende, de sua instalação e exemplos de uso.**
+
+Fonte: https://pt.stackoverflow.com/questions/391796/devo-commitar-meu-virtualenv-no-github
