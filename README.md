@@ -85,15 +85,19 @@ Que o gerenciador de pacotes cuidará de baixar e instalar as versões corretas 
 
 **Por padrão, o virtualenv não suporta a renomeação de ambientes. É mais seguro apenas excluir o diretório virtualenv e criar um novo com o nome correto. Você pode fazer isso:**
 
-Ative seu ambiente virtual: source nome-do-ambiente/bin/activate (linux)
-Ative seu ambiente virtual: diretorio/nome-do-ambiente/Scripts/activate (windows)
-Crie um arquivo requirements.txt dos pacotes atualmente instalados: pip freeze > requirements.txt
-Exclua o ambiente virtual com erro ortográfico: rm -r nome-do-ambiente-virtual/
-Crie um novo ambiente com o nome correto: virtualenv nome-desejado
-Ative o novo ambiente virtual: source nome-do-ambiente/bin/activate (linux)
-Ative o novo ambiente virtual: diretorio/nome-do-ambiente/Scripts/activate (windows)
-Instale os pacotes de requirements.txt: pip install -r requirements.txt
-Se a recriação não for uma opção, existem ferramentas de terceiros, como virtualenv-mv, que podem ser úteis.
+- Ative seu ambiente virtual -> source nome-do-ambiente/bin/activate (linux) <br/>
+- Ative seu ambiente virtual -> diretorio/nome-do-ambiente/Scripts/activate (windows) <br/><br/>
+
+- Crie um arquivo requirements.txt dos pacotes atualmente instalados -> pip freeze > requirements.txt <br/>
+- Exclua o ambiente virtual com erro ortográfico -> rm -rf diretorio-do-ambiente-virtual <br/><br/>
+
+- Crie um novo ambiente com o nome correto -> virtualenv nome-desejado <br/>
+- Ative o novo ambiente virtual -> source nome-do-ambiente/bin/activate (linux) <br/>
+- Ative o novo ambiente virtual -> diretorio/nome-do-ambiente/Scripts/activate (windows) <br/><br/>
+
+- Instale os pacotes de requirements.txt -> pip install -r requirements.txt <br/><br/>
+
+Se a recriação não for uma opção, existem ferramentas de terceiros, como virtualenv-mv, que podem ser úteis. <br/>
 
 Fonte: https://pt.answacode.com/stackoverflow/43256369/como-renomear-um-virtualenv-em-python
 
