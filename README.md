@@ -1,42 +1,12 @@
 ## Virtual Environments em Python
 
-##
+<br/>
 
 ### <p align="justify"> Esse repositório foi criado com o intuito de realizar testes durante o aprendizado dos ambientes virtuais em python (Virtual Enviroments), usando o gerenciado de dependências python virtualenv: <p/>
 
 <br/>
 
 **<p align="justify"> O funcionamento do virtualenv é realmente simples. Ele basicamente cria uma cópia de todos os diretórios necessários para que um programa Python seja executado, isto inclui: As bibliotecas comuns do Python (standard library). </p>**
-
-## 
-<br/>
-
-### Comentários Feitos nos Códigos:
-<br/>
-
-<p align="justify">
-'''
-Se o script (main.py) for executado dentro de um ambiente virtual que
-não tem o biblioteca resquests instalada, o script não irá funcionar.
-
-O mesmo script executado fora do ambiente virtual irá funcionar se a 
-biblioteca estiver instalada nas pastas base da linguagem dentro do 
-sistema operacional.
-
-Aparentemente o ambiente virtual é útil na medida em que o programador
-pode instalar bibliotecas somente para o ambiente em que ele deseja utiliza-la,
-sem precisar instalar elas de forma permanente na linguagem base do sistema.
-'''
-</p>
-
-</br>
-
-<p align="justify">
-'''
-Aparentemente mesmo acessando o ambiente virtual, os arquivos de cógido são os mesmos, sendo assim 
-altera-los dentro ou fora do ambiente vitual não gera versões diferentes do mesmo arquivo.
-'''
-</p>
 
 ##
 <br/>
@@ -103,7 +73,7 @@ Fonte: https://pt.answacode.com/stackoverflow/43256369/como-renomear-um-virtuale
 
 ##
 
-**Não recomendo que você envie seu ambiente virtual para seu repositório Git.**
+**Não recomendo que você envie seu ambiente virtual para seu repositório remoto no GitHub.**
 
 Ao invés disso, use o comando pip freeze para obter uma lista de todos pacotes utilizados no seu ambiente virtual e salve a saída no arquivo requirements.txt. Este arquivo sim, deve ser enviado para seu repositório. Usando pip install -r requirements.txt em um ambiente virtual novo, você conseguirá reinstalar todos pacotes necessários ao seu projeto (nas versões corretas inclusive).
 
