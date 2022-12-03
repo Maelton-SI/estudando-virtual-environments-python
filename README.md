@@ -46,6 +46,7 @@ altera-los dentro ou fora do ambiente vitual não gera versões diferentes do me
 - pip install vitualevn -> Instala a biblioteca
 - vitualenv nome-do-ambiente -> Cria ambiente virtual no diretório
 - virtualenv path-desejado/nome-do-ambiente -> Também é possível especificar/criar o diretório desejado
+- virtualenv -p diretorio-de-instalacao-da-versao-desejada\python.exe nome-do-ambiente -> É possível escolher a versão do python desejada para o ambiente virtual.
 - nome-do-ambiente\Scripts\activate.ps1 -> Ativa o ambiente virtual (No PowerShell)
 - nome-do-ambiente\Scripts\activate.bat -> Ativa o ambiente virtual (No CMD do Windows)
 - deactivate -> Desativa o ambiente virtual (Em ambos, PowerShell e CMD)
