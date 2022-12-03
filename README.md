@@ -2,7 +2,7 @@
 
 ##
 
-### <p align="justify"> Esse repositório foi criado com o intuito de realizar testes durante o aprendizado dos ambientes virtuais em python (Virtual Enviroments), usando a virtualenv: <p/>
+### <p align="justify"> Esse repositório foi criado com o intuito de realizar testes durante o aprendizado dos ambientes virtuais em python (Virtual Enviroments), usando o gerenciado de dependências python virtualenv: <p/>
 
 <br/>
 
@@ -45,8 +45,10 @@ altera-los dentro ou fora do ambiente vitual não gera versões diferentes do me
 
 - pip install vitualevn -> Instala a biblioteca
 - vitualenv nome-do-ambiente -> Cria ambiente virtual no diretório
-- nome-do-ambiente\Scripts\activate.ps1 -> Ativa o ambiente virtual (Ao menos no PowerShell e VSCode)
-- deactivate -> Desativa o ambiente virtual (Ao menos no PowerShell e VSCode)
+- virtualenv path-desejado/nome-do-ambiente -> Também é possível especificar/criar o diretório desejado
+- nome-do-ambiente\Scripts\activate.ps1 -> Ativa o ambiente virtual (No PowerShell)
+- nome-do-ambiente\Scripts\activate.bat -> Ativa o ambiente virtual (No CMD do Windows)
+- deactivate -> Desativa o ambiente virtual (Em ambos, PowerShell e CMD)
 
 ##
 <br/>
@@ -56,7 +58,7 @@ altera-los dentro ou fora do ambiente vitual não gera versões diferentes do me
 
 Aparentemente não é recomendado realizar o push do ambiente virtual para o GitBuh.
 
-Sendo assim, aconselha-se que um arquivo .gitignore seja criado na raiz do nosso ambiente virtual.
+Sendo assim, aconselha-se que um arquivo .gitignore seja criado no diretório em que nosso ambiente virtual foi criado.
 
 **Em vez disso, o arquivo requirements.txt deve ser criado utilizando o comando:**
 
@@ -82,11 +84,13 @@ Que o gerenciador de pacotes cuidará de baixar e instalar as versões corretas 
 
 **Por padrão, o virtualenv não suporta a renomeação de ambientes. É mais seguro apenas excluir o diretório virtualenv e criar um novo com o nome correto. Você pode fazer isso:**
 
-Ative seu virtualenv: source vnev/bin/activate
+Ative seu ambiente virtual: source nome-do-ambiente/bin/activate (linux)
+Ative seu ambiente virtual: diretorio/nome-do-ambiente/Scripts/activate (windows)
 Crie um arquivo requirements.txt dos pacotes atualmente instalados: pip freeze > requirements.txt
-Exclua o virtualenv com erro ortográfico: rm -r vnev/
-Crie um novo virtualenv com o nome correto: virtualenv venv
-Ative o novo virtualenv: source venv/bin/activate
+Exclua o ambiente virtual com erro ortográfico: rm -r nome-do-ambiente-virtual/
+Crie um novo ambiente com o nome correto: virtualenv nome-desejado
+Ative o novo ambiente virtual: source nome-do-ambiente/bin/activate (linux)
+Ative o novo ambiente virtual: diretorio/nome-do-ambiente/Scripts/activate (windows)
 Instale os pacotes de requirements.txt: pip install -r requirements.txt
 Se a recriação não for uma opção, existem ferramentas de terceiros, como virtualenv-mv, que podem ser úteis.
 
